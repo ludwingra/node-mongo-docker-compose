@@ -1,6 +1,11 @@
 const express = require('express');
+const routes = require('./routes');
 
 const app = express();
+
+require('./database');
+
+app.use(routes.indexRouter);
 
 app.set('port', 3000);
 
